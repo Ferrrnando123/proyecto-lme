@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Identidad Sombra</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/correos.css">
+  
+  
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo font-condensed-bold">SENTRA</div>
+    <!-- Buscador removido -->
+    <img src="https://storage.googleapis.com/a1aa/image/001f08fc-6dd4-4b72-c4d2-9886f052ad54.jpg" alt="User avatar silhouette" width="32" height="32"/>
+   
+  </header>
+   <nav class="nav-menu" id="navMenu">
+    <a href="home.html" class="nav-item"><i class="fas fa-home"></i><span>Home</span></a>
+    <a href="#" class="nav-item"><i class="fas fa-user-shield"></i><span>Verificar brecha</span></a>
+    <a href="#" class="nav-item"><i class="fas fa-key"></i><span>Generar contraseñas</span></a>
+    <a href="#" class="nav-item"><i class="fas fa-exclamation-triangle"></i><span>Alertas</span></a>
+    <a href="#" class="nav-item"><i class="fas fa-chart-bar"></i><span>Estadísticas</span></a>
+    <a href="#" class="nav-item"><i class="fas fa-book"></i><span>Guía de seguridad</span></a>
+    <a href="emailgenerator.html" class="nav-item"><i class="fas fa-user-secret"></i><span>Identidad sombra</span></a>
+  </nav>
+
+  
+
+  <main id="mainContent">
+    <section>
+      <p>Generar credenciales temporales</p>
+      <form onsubmit="return false;">
+        <label for="email-pass">Correo electrónico y contraseña</label>
+        <input id="email-pass" readonly type="text" value=""/>
+        <input id="password" readonly type="text" value=""/>
+      </form>
+      <button id="generateBtn" type="button">Generate</button>
+      <p id="timer">Tiempo restante 0:00</p>
+
+      <div id="inbox" style="display:none;">
+        <h3>Bandeja de entrada</h3>
+        <div id="messagesList"></div>
+        <div id="messageContent" style="display:none;"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/correos.js"></script>
+  
+</body>
+</html>
