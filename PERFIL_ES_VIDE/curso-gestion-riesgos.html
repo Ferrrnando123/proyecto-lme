@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Curso de Gestión de Riesgos en Ciberseguridad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome para los íconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+   * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e1c2e 0%, #282640 100%);
+  color: #e6e6e6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1e2a38;
+  color: #e4ecf4;
+}
+
+.contenedor-padre-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.texto-sentra {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e4ecf4;
+}
+
+.contenedor-principal-busqueda {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.segundo-contenedor-busqueda {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  background-color: #2f3e4e;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.input-busqueda {
+  background-color: transparent;
+  border: none;
+  color: #e4ecf4;
+  outline: none;
+  padding: 5px;
+  flex-grow: 1;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.fa-magnifying-glass {
+  color: #e4ecf4;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.foto-perfil {
+  font-size: 30px;
+  cursor: pointer;
+  color: #e4ecf4;
+}
+
+.segundo-contenedor-navbar {
+  background-color: #1e2a38;
+}
+
+.lista-desordenada-navbar {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  color: #e4ecf4;
+}
+
+.lista-desordenada-navbar li {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.lista-desordenada-navbar li:hover {
+  background-color: rgba(240, 248, 255, 0.2);
+  border-radius: 10px;
+}
+.lista-desordenada-navbar a {
+  color: inherit;
+  text-decoration: none;
+}
+    /* VIDEOS */
+    .videos-section-title {
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin: 34px 0 18px 0;
+      padding-left: 32px;
+      color: #faf7f7;
+      text-shadow: 0 2px 14px #1e1c2e55;
+    }
+    .videos-container {
+      width: 90%;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 0 40px 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px 20px;
+      background: none;
+      min-height: 60vh;
+    }
+    .video-card {
+      background: linear-gradient(145deg, #23243a 60%, #191726 100%);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px #000b, 0 1.5px 8px #ff3d5440;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.18s, box-shadow 0.18s, border 0.18s;
+      border: 2.5px solid transparent;
+      position: relative;
+      min-height: 290px;
+      width: 100%;
+    }
+    .video-card:hover {
+      transform: translateY(-7px) scale(1.025);
+      box-shadow: 0 16px 32px #000c, 0 2px 17px #ff3d5440;
+      border-color: #3d40ff;
+    }
+    .video-thumb {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #0e131e;
+      border-bottom: 2px solid #282640;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .video-thumb iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 0;
+      background: #000;
+      display: block;
+    }
+    .video-info {
+      padding: 18px 14px 14px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+    .video-title {
+      font-size: 1.13em;
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 3px;
+      text-shadow: 0 1px 5px #ff3d5433, 0 1px 8px #0004;
+      letter-spacing: 0.5px;
+      line-height: 1.2;
+    }
+    .video-status {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: linear-gradient(90deg, #28e183 60%, #11c766 100%);
+      color: #181818;
+      font-weight: 600;
+      font-size: 1em;
+      padding: 6px 18px 6px 12px;
+      border-radius: 18px;
+      box-shadow: 0 1px 7px #0006;
+      display: none;
+      align-items: center;
+      gap: 8px;
+      z-index: 2;
+      transition: background 0.3s, color 0.3s;
+    }
+    .video-status.terminado {
+      display: flex;
+    }
+    .video-status i {
+      color: #10723e;
+      font-size: 1.1em;
+    }
+
+    /* Responsive */
+    @media (max-width: 1200px) {
+      .videos-container {
+        width: 95%;
+      }
+    }
+    @media (max-width: 1000px) {
+      .videos-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 700px) {
+      .videos-container {
+        grid-template-columns: 1fr;
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER & NAV -->
+  <header class="header">
+    <div class="contenedor-padre-header">
+      <div class="texto-sentra">SENTRA</div>
+      <div class="contenedor-principal-busqueda">
+        <div class="segundo-contenedor-busqueda">
+          <input type="text" class="input-busqueda" placeholder="Buscar" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <a href="perfil.html"><i class="fa-solid fa-circle-user foto-perfil"></i></a>
+    </div>
+  </header>
+  <nav class="segundo-contenedor-navbar">
+    <ul class="lista-desordenada-navbar">
+      <li class="home"><a href="index.html">Home</a></li>
+      <li class="verificar-brecha"><a href="verificar.html">Verificar brecha</a></li>
+      <li class="generar-contra"><a href="generar.html">Generar contraseñas</a></li>
+      <li class="alertas"><a href="alertas.html">Alertas</a></li>
+      <li class="estadisticas"><a href="estadistica.html">Estadísticas</a></li>
+      <li class="guia-de-seguridad"><a href="Recurso.html">Guía de seguridad</a></li>
+      <li class="identidad-sombra"><a href="sombra.html">Identidad sombra</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h2 class="videos-section-title">Curso de Gestión de Riesgos en Ciberseguridad</h2>
+    <div class="videos-container" id="videosContainer"></div>
+  </main>
+  <script>
+    // Progreso en localStorage
+    function getVideoProgress() {
+      return JSON.parse(localStorage.getItem('videoProgress') || '{}');
+    }
+    function setVideoProgress(progress) {
+      localStorage.setItem('videoProgress', JSON.stringify(progress));
+    }
+
+    // Videos del curso de gestión de riesgos (en orden secuencial)
+   const videos = [
+  {
+    id: "v1",
+    title: '01 - Introducción a la Gestión de Riesgos de Ciberseguridad',
+    url: 'https://www.youtube.com/embed/Yp4xno2agPE',
+    description: 'Conceptos básicos y marco teórico de la gestión de riesgos en ciberseguridad.'
+  },
+  {
+    id: "v2",
+    title: '02 - Identificación de Activos y Amenazas en Ciberseguridad',
+    url: 'https://www.youtube.com/embed/88HAhGbu6z4',
+    description: 'Cómo identificar y proteger activos críticos frente a amenazas potenciales.'
+  },
+  {
+    id: "v3",
+    title: '03 - Evaluación de Vulnerabilidades en Sistemas Informáticos',
+    url: 'https://www.youtube.com/embed/kEbleRf1iLE',
+    description: 'Técnicas y herramientas para evaluar vulnerabilidades en sistemas y redes.'
+  },
+  {
+    id: "v4",
+    title: '04 - Metodologías de Análisis de Riesgos: NIST, ISO 27005, OCTAVE',
+    url: 'https://www.youtube.com/embed/wSD0TJz7oxw',
+    description: 'Visión general de metodologías estándar para análisis de riesgos.'
+  },
+  {
+    id: "v5",
+    title: '05 - Cuantificación del Impacto de los Riesgos en Ciberseguridad',
+    url: 'https://www.youtube.com/embed/ZChyPXGkz5U',
+    description: 'Cómo calcular el impacto financiero y operacional de los riesgos.'
+  },
+  {
+    id: "v6",
+    title: '06 - Construcción e Interpretación de Matrices de Riesgo',
+    url: 'https://www.youtube.com/embed/z7iYEI0GdhI',
+    description: 'Aprende a construir e interpretar matrices de riesgo para priorizar amenazas.'
+  },
+  {
+    id: "v7",
+    title: '07 - Estrategias de Tratamiento de Riesgos: Mitigación, Transferencia, Aceptación y Evitación',
+    url: 'https://www.youtube.com/embed/ANM_eVt3onY',
+    description: 'Diferentes estrategias para tratar los riesgos identificados.'
+  },
+  {
+    id: "v8",
+    title: '08 - Selección e Implementación de Controles de Seguridad Basados en Riesgos',
+    url: 'https://www.youtube.com/embed/3tkJVhOzevo',
+    description: 'Cómo seleccionar e implementar controles de seguridad adecuados.'
+  },
+  {
+    id: "v9",
+    title: '09 - Monitoreo y Revisión Continua de Riesgos en Ciberseguridad',
+    url: 'https://www.youtube.com/embed/h1xmOWk-68M',
+    description: 'Importancia del monitoreo y revisión continua para mantener la seguridad.'
+  },
+  {
+    id: "v10",
+    title: '10 - Gestión de Riesgos en la Cadena de Suministro y Proveedores Externos',
+    url: 'https://www.youtube.com/embed/ANM_eVt3onY',
+    description: 'Gestión de riesgos asociados a terceros y proveedores externos.'
+  },
+  {
+    id: "v11",
+    title: '11 - Cumplimiento Normativo en Ciberseguridad: GDPR, ISO 27001, NIST CSF',
+    url: 'https://www.youtube.com/embed/Yp4xno2agPE',
+    description: 'Visión general de marcos regulatorios y su importancia.'
+  },
+  {
+    id: "v12",
+    title: '12 - Caso Práctico Integral de Gestión de Riesgos en Ciberseguridad',
+    url: 'https://www.youtube.com/embed/wSD0TJz7oxw',
+    description: 'Aplicación práctica de todo el proceso en un caso real.'
+  }
+];
+
+
+    // Render videos
+    function showVideos() {
+      const container = document.getElementById('videosContainer');
+      container.innerHTML = '';
+      const progress = getVideoProgress();
+
+      videos.forEach(video => {
+        const card = document.createElement('div');
+        card.className = 'video-card';
+
+        card.innerHTML = `
+          <div class="video-thumb">
+            <span class="video-status${progress[video.id] === true ? ' terminado' : ''}" id="status-${video.id}">
+              <i class="fa-solid fa-circle-check"></i> Terminado
+            </span>
+            <iframe id="frame-${video.id}" src="${video.url}" 
+              title="${video.title}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="video-info">
+            <div class="video-title">${video.title}</div>
+            <p class="video-description">${video.description}</p>
+          </div>
+        `;
+        container.appendChild(card);
+
+        // Marcar "Terminado" cuando el video termine de verse
+        setTimeout(() => {
+          const iframe = document.getElementById(`frame-${video.id}`);
+          if (!iframe) return;
+
+          if (!window.YouTubeAPIReady) {
+            let tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            document.body.appendChild(tag);
+            window.YouTubeAPIReady = true;
+          }
+
+          window.onYouTubeIframeAPIReady = () => {
+            createPlayer(video, iframe);
+          };
+          if (window.YT && window.YT.Player) {
+            createPlayer(video, iframe);
+          }
+        }, 100);
+      });
+    }
+
+    // YouTube API
+    function createPlayer(video, iframe) {
+      if (iframe.youtubePlayer) return;
+      iframe.youtubePlayer = new YT.Player(iframe, {
+        events: {
+          'onStateChange': function(event) {
+            if (event.data === YT.PlayerState.ENDED) {
+              markAsCompleted(video.id);
+            }
+          }
+        }
+      });
+    }
+
+    function markAsCompleted(videoId) {
+      const progress = getVideoProgress();
+      if (progress[videoId]) return;
+      progress[videoId] = true;
+      setVideoProgress(progress);
+      const badge = document.getElementById(`status-${videoId}`);
+      if (badge) badge.classList.add('terminado');
+    }
+
+    window.addEventListener('DOMContentLoaded', showVideos);
+  </script>
+</body>
+</html>

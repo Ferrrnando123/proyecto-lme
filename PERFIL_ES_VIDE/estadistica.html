@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ataques Cibernéticos Recientes</title>
+  <link rel="stylesheet" href="Css/estadistica.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="contenedor-padre-header">
+      <div class="texto-sentra">
+        SENTRA
+      </div>
+      <div class="contenedor-principal-busqueda">
+        <div class="segundo-contenedor-busqueda">
+          <input type="text" class="input-busqueda" placeholder="Buscar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+      </div>
+      <a href="perfil.html"><i class="fa-solid fa-circle-user foto-perfil"></i></a>
+    </div>
+  </header>
+
+ <ul class="lista-desordenada-navbar">
+  <li class="home"><a href="index.html">Home</a></li>
+  <li class="verificar-brecha"><a href="verificar.html">Verificar brecha</a></li>
+  <li class="generar-contra"><a href="generar.html">Generar contraseñas</a></li>
+  <li class="alertas"><a href="alertas.html">Alertas</a></li>
+  <li class="estadisticas"><a href="estadistica.html">Estadísticas</a></li>
+  <li class="guia-de-seguridad"><a href="Recurso.html">Guía de seguridad</a></li>
+  <li class="identidad-sombra"><a href="sombra.html">Identidad sombra</a></li>
+</ul>
+
+  <main>
+    <section id="types-of-attacks-section">
+      <h2>Ataques</h2>
+      <div id="types-of-attacks-container"></div>
+    </section>
+
+    <section id="chart-section">
+      <canvas id="attackChart" aria-label="Gráfico de ataques recientes" role="img"></canvas>
+    </section>
+
+    <section id="news-section">
+      <h2>Noticias de Ciberseguridad</h2>
+      <div id="news-container"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p id="last-update">Última actualización: --:--:--</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="estadistica.js"></script>
+
+</body>
+</html>

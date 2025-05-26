@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1e2a38;
+  color: #f1f5f9;
+  line-height: 1.6;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1e2a38;
+  color: #e4ecf4;
+}
+
+.contenedor-padre-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.texto-sentra {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e4ecf4;
+  text-align: left;
+}
+
+.contenedor-principal-busqueda {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.segundo-contenedor-busqueda {
+  display: flex;
+  align-items: center;
+  width: 300px;
+  background-color: #2f3e4e;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
+.input-busqueda {
+  background-color: transparent;
+  border: none;
+  color: #e4ecf4;
+  outline: none;
+  padding: 5px;
+  flex-grow: 1;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+.fa-magnifying-glass {
+  color: #e4ecf4;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.foto-perfil {
+  font-size: 30px;
+  cursor: pointer;
+  color: #e4ecf4;
+}
+
+/* Navegación */
+.segundo-contenedor-navbar {
+  background-color: #0857ab;
+  display: block;
+  padding: 10px 0;
+}
+
+.lista-desordenada-navbar {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #e4ecf4;
+}
+
+.lista-desordenada-navbar li {
+  padding: 10px 20px;
+}
+
+.lista-desordenada-navbar li:hover {
+  background-color: rgba(240, 248, 255, 0.2);
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* Sección de Tipos de Ataques */
+#types-of-attacks-section {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#types-of-attacks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tipo-ataque {
+  background-color: #0f172a;
+  border-left: 5px solid #38bdf8;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.tipo-ataque h3 {
+  margin-bottom: 10px;
+  color: #f8fafc;
+  font-size: 1.2rem;
+}
+
+.tipo-ataque p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+#chart-section {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  height: 400px;
+}
+
+#news-section {
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#news-section h2 {
+  color: #38bdf8;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+#news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.noticia {
+  background-color: #0f172a;
+  border-left: 5px solid #38bdf8;
+  padding: 16px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.noticia:hover {
+  background-color: #17263b;
+}
+
+.noticia h3 {
+  margin-bottom: 10px;
+  color: #f8fafc;
+  font-size: 1.2rem;
+}
+
+.noticia p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.noticia a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  background: #1e293b;
+}
+.lista-desordenada-navbar a {
+  color: inherit;
+  text-decoration: none;
+}
